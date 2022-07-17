@@ -1,7 +1,10 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import './assets/css/reset.less'
-import Loading from './components/Loading'
+import Loading from './plugins/Loading'
+import { createPinia } from 'pinia'
+
+const store = createPinia()
 
 const app = createApp(App)
 
@@ -14,5 +17,7 @@ declare module '@vue/runtime-core' {
     }
 }
 app.use(Loading)
+
+app.use(store)
 
 app.mount('#app')
