@@ -9,6 +9,16 @@
 </template>
 
 <script lang="ts" setup>
+import { ComponentInternalInstance, getCurrentInstance } from 'vue';
+
+const { appContext } = getCurrentInstance() as ComponentInternalInstance
+
+appContext.config.globalProperties.$loading.show()
+
+setTimeout(() => {
+    appContext.config.globalProperties.$loading.hide()
+}, 5000)
+
 </script>
 
 <style lang="less" scoped>
