@@ -3,6 +3,7 @@ import App from './App.vue'
 import './assets/css/reset.less'
 import Loading from './plugins/Loading'
 import { createPinia } from 'pinia'
+// import vueRouter from 'vue-router'
 
 const store = createPinia()
 
@@ -19,5 +20,6 @@ declare module '@vue/runtime-core' {
 app.use(Loading)
 
 app.use(store)
+// app.use(vueRouter)
 
 app.mount('#app')
