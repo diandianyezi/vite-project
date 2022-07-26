@@ -2,7 +2,10 @@
     <div class="content">
         <div>
             pinia: {{Test.current}}--- {{Test.name}}
-            <button @click="change"></button>
+            <button @click="change">修改pinia State</button>
+        </div>
+        <div class="test-aspect-ratio">
+            aspect-ratio
         </div>
         <div class="content-item" v-for="item in 100" :key="item">
         {{
@@ -56,6 +59,11 @@ setTimeout(() => {
     margin: 20px;
     border: 1px solid #e8e8e8;
     overflow: scroll;
+    .test-aspect-ratio {
+        width: 100px;
+        background: red;
+        aspect-ratio: 16 / 9;
+    }
     &-item {
         padding: 20px;
         border-bottom: 1px solid #ccc;
